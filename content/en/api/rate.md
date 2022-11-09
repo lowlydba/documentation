@@ -3,10 +3,6 @@ title: Rate
 kind: documentation
 aliases:
     - /graphing/functions/rate/
-further_reading:
-- link: "/monitors/guide/alert-on-no-change-in-value/"
-  tag: "Documentation"
-  text: "Alert on No Change in value"
 ---
 
 ## Per second
@@ -39,8 +35,6 @@ further_reading:
 |:---------|:-------------------------------|:-------------------------|
 | `diff()` | Graph the delta of the metric. | `diff(<METRIC_NAME>{*})` |
 
-Calculates the difference between each interval on a per interval basis. For example, a metric submits data points with a 15 second interval, the `diff()` modifier would show it over 15 second rate. **Note:** The calculation is done after applying time aggregation and before space aggregation takes place. 
-
 ## Monotonic difference
 
 | Function           | Description                                                                     | Example                            |
@@ -67,7 +61,3 @@ Calculates the difference between each interval on a per interval basis. For exa
     {{< nextlink href="/dashboards/functions/smoothing" >}}Smoothing: Smooth your metric variations.{{< /nextlink >}}
     {{< nextlink href="/dashboards/functions/timeshift" >}}Timeshift: Shift your metric data point along the timeline. {{< /nextlink >}}
 {{< /whatsnext >}}
-
-## Further Reading
-
-{{< partial name="whats-next/whats-next.html" >}}
