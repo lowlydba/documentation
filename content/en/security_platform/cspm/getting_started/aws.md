@@ -17,60 +17,43 @@ further_reading:
 
 placeholder text
 
-## Setup
-
-### Installation
-
-If you haven't already, set up the [Amazon Web Services integration][1] first.
-
 ### Set up the Datadog AWS integration
 
-If you haven't already, set up the Amazon Web Services integration first.
-
-Make sure to give correct permissions
+If you haven't already, set up the [Amazon Web Services integration][1]. For CSPM, you must also add the [necessary permissions][2] for resource collection. 
 
 ### Enable CSPM for AWS
 
-one of the following ways:
+Use one of the following methods to enable CSPM for your AWS accounts:
 
-On the AWS integration tile, ensure that Cloud Security Posture Management Collection is checked under resource collection.
-
-   1. Click on the AWS account where you wish to enable resource collection.
-   2. Go to the **Resource collection** tab for that account and enable `Cloud Security Posture Management Collection`.
-
-
-CSPM (in the product):
+#### Security Setup & Configuration
 
 1. Navigate to **Security** > **Setup and Configuration**.
 2. Select **Posture Management**.
-3. Ensure necessary permissions...
-4. To enable CSPM for an AWS account, turn on the **Collect Resources** toggle.
+3. To enable CSPM for an AWS account, turn on the **Collect Resources** toggle.
 
-AWS integration tile:
+#### AWS integration tile
 
 1. On the AWS integration tile, select an AWS account and click **Resource Collection**.
 2. Select **Cloud Security Posture Management Collection** to enable resource collection for CSPM.
 3. Click **Save**.
 
-
-> Resource Collection tab, ensure 
-
 ### Visualize the first results
 
 placeholder text
 
-### Onboard new accounts following the same process
+Onboard new accounts following the same process
 
-## Explore AWS detection rules
+### Explore AWS detection rules
 
 CSPM comes with a set of out-of-the-box detection rules which aim to catch attack attempts and vulnerability triggers that impact your production systems.
 
 Detection Rules list in product, and tick “AWS” to see all rules applying to AWS.
 Full list of OOTB rules (link)
 
-[out-of-the-box detection rules][2].
+[out-of-the-box detection rules][3].
 
 Navigate to **Security** > **Detection Rules** and click **Detection Rules**.
 
 [1]: https://docs.datadoghq.com/integrations/amazon_web_services/
-[2]: /security_platform/default_rules/#cat-posture-management-cloud
+[2]: /integrations/amazon_web_services/?tab=roledelegation#cloud-security-posture-management
+[3]: /security_platform/default_rules/#cat-posture-management-cloud
