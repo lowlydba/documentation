@@ -25,19 +25,20 @@ Use one of the following methods to enable CSPM for your AWS accounts:
 2. Select **Cloud Security Posture Management Collection** to enable resource collection for CSPM.
 3. Click **Save**.
 
-Onboard new accounts following the same process
-
 ## Visualize the first results
 
-placeholder text
+Go to the homepage and wait for the first run to be complete
 
 ## Explore AWS detection rules
 
 CSPM comes with a set of [out-of-the-box detection rules][3] that evaluate the configuration of your AWS resources and identifies potential misconfigurations so you can immediately take steps to remediate.
 
-Datadog continuously develops new default rules, which are automatically imported into your account, your Application Security Management library, and the Agent, depending on your configuration.
+To explore the AWS detection rules:
 
-Navigate to **Security** > **Detection Rules** and click **Detection Rules**.
+1. Navigate to **Security** > **Detection Rules**.
+2. Choose **cloud_provider:aws** from the **Tag** facet.
+
+Datadog continuously develops new default rules, which are automatically imported into your account, your Application Security Management library, and the Agent, depending on your configuration.
 
 [1]: https://docs.datadoghq.com/integrations/amazon_web_services/
 [2]: /integrations/amazon_web_services/?tab=roledelegation#cloud-security-posture-management
