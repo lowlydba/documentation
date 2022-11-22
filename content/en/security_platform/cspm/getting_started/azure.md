@@ -1,16 +1,6 @@
 ---
 title: Azure Getting Started with CSPM
 kind: documentation
-further_reading:
-- link: "security_platform/default_rules"
-  tag: "Documentation"
-  text: "Explore default cloud configuration detection rules"
-- link: "security_platform/cspm/findings"
-  tag: "Documentation"
-  text: "Search and explore CSPM findings"
-- link: "security_platform/cspm/frameworks_and_benchmarks"
-  tag: "Documentation"
-  text: "Learn about frameworks and industry benchmarks"
 ---
 
 ## Overview 
@@ -45,12 +35,9 @@ Onboard new accounts following the same process
 
 ### Explore Azure detection rules
 
-CSPM comes with a set of out-of-the-box detection rules which aim to catch attack attempts and vulnerability triggers that impact your production systems.
+CSPM comes with a set of [out-of-the-box detection rules][2] that evaluate the configuration of your Azure resources and identifies potential misconfigurations so you can immediately take steps to remediate.
 
-Detection Rules list in product, and tick Azure to see all rules applying to AWS.
-Full list of OOTB rules (link)
-
-[out-of-the-box detection rules][3].
+Datadog continuously develops new default rules, which are automatically imported into your account, your Application Security Management library, and the Agent, depending on your configuration.
 
 Navigate to **Security** > **Detection Rules** and click **Detection Rules**.
 
