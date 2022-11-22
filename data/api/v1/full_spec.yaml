@@ -5175,9 +5175,7 @@ components:
             associated target attribute values,
 
             formatted as `["source_key1,target_value1", "source_key2,target_value2"]`'
-          example:
-          - source_key1,target_value1
-          - source_key2,target_value2
+          example: []
           items:
             description: Mapping between a source and a value, it should follow the
               format `"<SOURCE>,<VALUE>"`.
@@ -5188,14 +5186,14 @@ components:
           type: string
         source:
           description: Source attribute used to perform the lookup.
-          example: service_id
+          example: ''
           type: string
         target:
           description: 'Name of the attribute that contains the corresponding value
             in the mapping list
 
             or the `default_lookup` if not found in the mapping list.'
-          example: service
+          example: ''
           type: string
         type:
           $ref: '#/components/schemas/LogsLookupProcessorType'
@@ -5382,7 +5380,6 @@ components:
       - $ref: '#/components/schemas/LogsPipelineProcessor'
       - $ref: '#/components/schemas/LogsGeoIPParser'
       - $ref: '#/components/schemas/LogsLookupProcessor'
-      - $ref: '#/components/schemas/ReferenceTableLogsLookupProcessor'
       - $ref: '#/components/schemas/LogsTraceRemapper'
       type: object
     LogsQueryCompute:
@@ -8680,51 +8677,6 @@ components:
           $ref: '#/components/schemas/LogQueryDefinition'
         security_query:
           $ref: '#/components/schemas/LogQueryDefinition'
-      type: object
-    ReferenceTableLogsLookupProcessor:
-      description: '**Note**: Reference Tables are in public beta.
-
-        Use the Lookup Processor to define a mapping between a log attribute
-
-        and a human readable value saved in a Reference Table.
-
-        For example, you can use the Lookup Processor to map an internal service ID
-
-        into a human readable service name. Alternatively, you could also use it to
-        check
-
-        if the MAC address that just attempted to connect to the production
-
-        environment belongs to your list of stolen machines.'
-      properties:
-        is_enabled:
-          default: false
-          description: Whether or not the processor is enabled.
-          type: boolean
-        lookup_enrichment_table:
-          description: Name of the Reference Table for the source attribute and their
-            associated target attribute values.
-          example: service_id_to_service_name_table
-          type: string
-        name:
-          description: Name of the processor.
-          type: string
-        source:
-          description: Source attribute used to perform the lookup.
-          example: service_id
-          type: string
-        target:
-          description: Name of the attribute that contains the corresponding value
-            in the mapping list.
-          example: service
-          type: string
-        type:
-          $ref: '#/components/schemas/LogsLookupProcessorType'
-      required:
-      - source
-      - target
-      - lookup_enrichment_table
-      - type
       type: object
     ResponseMetaAttributes:
       description: Object describing meta attributes of response.
@@ -15907,11 +15859,6 @@ components:
             (and were NOT running the Datadog Agent).'
           format: int64
           type: integer
-        opentelemetry_apm_host_count:
-          description: Contains the total number of hosts using APM reported by Datadog
-            exporter for the OpenTelemetry Collector.
-          format: int64
-          type: integer
         opentelemetry_host_count:
           description: Contains the total number of hosts reported by Datadog exporter
             for the OpenTelemetry Collector.
@@ -16885,12 +16832,6 @@ components:
             date for all organizations.
           format: int64
           type: integer
-        opentelemetry_apm_host_top99p:
-          description: Shows the 99th percentile of APM hosts reported by the Datadog
-            exporter for the OpenTelemetry Collector over all hours in the current
-            date for all organizations.
-          format: int64
-          type: integer
         opentelemetry_host_top99p:
           description: Shows the 99th percentile of all hosts reported by the Datadog
             exporter for the OpenTelemetry Collector over all hours in the current
@@ -17250,12 +17191,6 @@ components:
           type: integer
         online_archive_events_count_sum:
           description: Sum of all online archived events over all hours in the current
-            date for the given org.
-          format: int64
-          type: integer
-        opentelemetry_apm_host_top99p:
-          description: Shows the 99th percentile of APM hosts reported by the Datadog
-            exporter for the OpenTelemetry Collector over all hours in the current
             date for the given org.
           format: int64
           type: integer
@@ -17645,12 +17580,6 @@ components:
           type: integer
         online_archive_events_count_agg_sum:
           description: Sum of all online archived events over all hours in the current
-            months for all organizations.
-          format: int64
-          type: integer
-        opentelemetry_apm_host_top99p_sum:
-          description: Shows the 99th percentile of APM hosts reported by the Datadog
-            exporter for the OpenTelemetry Collector over all hours in the current
             months for all organizations.
           format: int64
           type: integer
