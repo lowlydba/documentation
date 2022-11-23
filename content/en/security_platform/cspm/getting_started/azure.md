@@ -41,7 +41,7 @@ To explore the Azure detection rules:
 1. Navigate to **Security** > **Detection Rules**.
 2. Choose **cloud_provider:azure** from the **Tag** facet.
 
-After you explore the default detection rules, you can review and take action on your Azure misconfigurations in the [Security Findings Explorer][6], [customize how each rule scans your environment][3] and [set up notification targets][4].
+After you explore the default detection rules, you can review and take action on your Azure misconfigurations in the [Security Findings Explorer][6], [customize how each rule scans your environment][3], and [set up notification targets][4].
 
 [1]: https://docs.datadoghq.com/integrations/azure
 [2]: /security_platform/default_rules/#cat-posture-management-cloud
