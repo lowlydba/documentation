@@ -10,7 +10,7 @@ Cloud Security Posture Management (CSPM)...
 1. Navigate to **Security** > **Setup and Configuration**.
 2. Follow the [in-app instructions][5] to activate CSPM for your account.
 3. On the **Setup and Configuration** > **Host and containers** tab, click the **Docker** tile.
-4. Click **Select API key** to choose the API key to ...
+4. Click **Select API key** to choose the API key you want to use with CSPM.
 5. Run the following command to enable CSPM in your Docker environment:
 {{< code-block lang="bash" >}}
 DOCKER_CONTENT_TRUST=1 \
@@ -40,23 +40,25 @@ DOCKER_CONTENT_TRUST=1 \
 
 ## Visualize the first results
 
-Navigate to **Security** > **Posture Management**.
+CSPM evaluates resources in increments between 15 minutes and four hours (depending on type). New findings from each scan are generated as soon as the scan completes.
 
-Go to the homepage and wait for the first run to be complete
+To view the findings for your Docker containers, go to the [CSPM homepage][7].
 
 ## Explore Docker detection rules
 
-CSPM comes with a set of [out-of-the-box detection rules][2] that analyze your Docker containers to find configuration issues as defined in the popular CIS compliance benchmark for Docker.
+CSPM comes with a set of [out-of-the-box detection rules][2] that analyze your Docker containers to find configuration issues as defined in the popular CIS compliance benchmark for Docker. When new configuration detection rules are added, they are automatically imported into your account.
 
 To explore the Docker detection rules:
 
 1. Navigate to **Security** > **Detection Rules**.
 2. Choose **framework:cis-docker** from the **Tag** facet.
 
-After you explore the default detection rules, you can [customize how each rule scans your environment][3] and [set up notification targets][4].
+After you explore the default detection rules, you can review and take action on your  Docker misconfigurations in the [Security Findings Explorer][6], [customize how each rule scans your environment][3], and [set up notification targets][4].
 
 [1]: https://docs.datadoghq.com/integrations/azure
 [2]: /security_platform/default_rules/#cat-posture-management-infra
 [3]: /security_platform/cspm/frameworks_and_benchmarks#customize-how-your-environment-is-scanned-by-each-rule
 [4]: /security_platform/cspm/frameworks_and_benchmarks#set-notification-targets-for-detection-rules
 [5]: https://app.datadoghq.com/security/configuration
+[6]: https://app.datadoghq.com/security/compliance?time=now
+[7]: https://app.datadoghq.com/security/compliance/homepage
