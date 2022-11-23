@@ -3,7 +3,7 @@ title: Kubernetes Getting Started with CSPM
 kind: documentation
 ---
 
-Cloud Security Posture Management (CSPM)...
+Cloud Security Posture Management (CSPM) makes it easier to assess and visualize the current and historic security posture of your Kubernetes clusters, automate audit evidence collection, and catch misconfigurations that leave your organization vulnerable to attacks.
 
 ## Enable CSPM for Kubernetes
 
